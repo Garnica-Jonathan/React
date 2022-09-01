@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Foto from "../Asset/My_Office_Noona’s_Story.jpg"
+
 import CartWidget from './CartWidget'
 
 const NavBar = () => {
