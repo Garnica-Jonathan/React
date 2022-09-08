@@ -15,7 +15,7 @@ const Items = () => {
   return (
     <div className='producto'>
         {
-            producto.map( producto=> <div className='list'><li className='titulo'>{producto.titulo}</li><div className="imagen"><img src={Foto} ></img></div><li className='precio'>{producto.precio}</li><li className='descripcion'>{producto.descripcion}</li></div>)
+            producto.map( (producto,id )=> <div key={id} className='list'><li className='titulo'>{producto.titulo}</li><div className="imagen"><img src={Foto} ></img></div><li className='precio'>{producto.precio}</li><li className='descripcion'>{producto.descripcion}</li></div>)
             
         }
 

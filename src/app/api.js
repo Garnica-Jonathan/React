@@ -1,6 +1,7 @@
 export const promesa = () =>{
     const list = new Promise((resolve, reject) =>{
-        resolve([
+        setTimeout(() => {
+            resolve([
             {
                 titulo: "novia de wallie 1",
                 precio: 5000,
@@ -16,7 +17,9 @@ export const promesa = () =>{
                 foto: "../Asset/novia_de_wallie.png"
             }
         ])
-        return list;
+        },2000)
+        
+
     })
     return list;
 }
