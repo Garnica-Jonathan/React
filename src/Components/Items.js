@@ -4,7 +4,7 @@ import {promesa} from "../app/api"
 import "../app/style.css"
 import Foto from"../Asset/novia_de_wallie.png"
 
-const Items = () => {
+const Items = (props) => {
     const [producto,setProducto] = useState([])
 
     useEffect(() =>{

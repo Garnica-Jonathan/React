@@ -46,5 +46,14 @@ justify-content: center;
 }
 .imagen img{
 width: 100px;
-
+}
+.InfoContainer{
+margin: 0 auto;
+width: 260px;
+}
+.infoTitulo{
+width: 250px;
+}
+.infoFoto{
+width: 250px;
 }
