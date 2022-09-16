@@ -18,6 +18,7 @@ const [producto,setProducto] = useState([])
         <Item key={id} item={producto}/>
       ))
       }
+      
     </div>
   )
 }

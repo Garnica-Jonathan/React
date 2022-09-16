@@ -1,6 +1,6 @@
 
 import React, {useEffect, useState} from 'react';
-import ItemList from './ItemList';
+import ItemList from '../Components/ItemList';
 
 
 
@@ -15,15 +15,18 @@ const ItemListContainer = ({initial, stock, onAdd}) => {
      setContar(contar + 1)
 
    }
+
   
   return (
     <div>
+      
        <button disabled={contar <= initial} onClick={decrementar}>-</button>
        <span>{contar}</span>
        <button disabled={contar >= stock} onClick={incrementar}>+</button>
        <div>
          <button onClick={() => onAdd(contar)}>Agregar al carrito</button>
        </div> 
+       
       <ItemList/>
     </div>
   )

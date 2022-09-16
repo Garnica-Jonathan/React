@@ -9,6 +9,7 @@ export const promesa = () =>{
                 descripcion:"novia cariñosa",
                 stock:7,
                 foto: Foto
+
             },
             {
                 titulo: "novia de wallie 2",
@@ -28,7 +29,14 @@ export const getItem = () => new Promise((resolve, reject) => {
         {
             titulo: "Informacion",
             foto : Foto,
-            descripcion: "Novia de Wallie un poco toxica"
+            descripcion: "Novia cariñosa",
+            id: 4
+        },
+        {
+            titulo: "Informacion",
+            foto : Foto,
+            descripcion: "Novia de Wallie un poco toxica",
+            id: 3
         }
     ]))
 })
