@@ -11,13 +11,6 @@ export const promesa = () =>{
                 foto: Foto
 
             },
-            {
-                titulo: "novia de wallie 2",
-                precio: 3000,
-                descripcion:"novia toxica",
-                stock:8,
-                foto: Foto
-            }
         ])
         },2000)
     })
@@ -32,11 +25,5 @@ export const getItem = () => new Promise((resolve, reject) => {
             descripcion: "Novia cariñosa",
             id: 4
         },
-        {
-            titulo: "Informacion",
-            foto : Foto,
-            descripcion: "Novia de Wallie un poco toxica",
-            id: 3
-        }
     ]))
 })

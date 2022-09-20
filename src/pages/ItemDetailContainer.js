@@ -15,11 +15,10 @@ const ItemDetailContainer = () => {
     const {asd} = useParams();
   return (
     <div>
-        {asd}
         {informacion.map((info, id) => (
-            <ItemDetail key={id} info={info} />
+            <ItemDetail key={id} info={info} useParams={asd}/>
         ))}
-    
+       
 
     </div>
   )

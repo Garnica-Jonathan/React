@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Cart from '../Components/Cart'
 
 import NavBar from '../Components/NavBar'
 import ItemDetailContainer from '../pages/ItemDetailContainer'
@@ -18,6 +19,7 @@ const Router = () =>(
 
                 <Route path="/ItemDetailContainer/" element={<ItemDetailContainer/>}/>
                 <Route path="/ItemDetailContainer/:asd" element={<ItemDetailContainer/>}/>
+                <Route path="/Cart/" element={<Cart/>}/>
             </Route>
             
         </Routes>
