@@ -3,10 +3,11 @@ import {promesa} from "../app/api"
 import { useState, useEffect } from 'react'
 import Item from './Item'
 
-const ItemList = ({}) => {
+const ItemList = () => {
 const [producto,setProducto] = useState([])
 
     useEffect(() =>{
+      // Fet().then(res => setProducto(res))
         promesa().then((data) =>{
             setProducto(data)
         })

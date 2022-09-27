@@ -17,7 +17,7 @@ const decrementar = () => {
         <span>{contar}</span>
         <button disabled={contar >= stock} onClick={incrementar}>+</button>
         <div>
-            <button onClick={onAdd}>Agregar al carrito</button>
+            <button onClick={() => onAdd(contar)}>Agregar al carrito</button>
         </div>
 
     </div>

@@ -1,23 +1,24 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { getItem } from '../app/api'
+import { getItem, promesa } from '../app/api'
 import ItemDetail from '../Components/ItemDetail'
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-    const[informacion, setInformacion] = useState([])
+    let {id} = useParams()
+     const[informacion, setInformacion] = useState()
 
-    useEffect(() => {
-        getItem().then((data) =>{
-            setInformacion(data)
-        })
-    },[])
-    const {asd} = useParams();
+      useEffect(() => {
+          promesa().then((data) => setInformacion(data.filter((item) => item.id == id)))
+      },[id])
+
   return (
     <div>
-        {informacion.map((info, id) => (
-            <ItemDetail key={id} info={info} useParams={asd}/>
-        ))}
+         {
+         informacion
+         ? informacion.map((info, id) => <ItemDetail key={id} info={info} />) 
+         : "cargando"
+        } 
        
 
     </div>
