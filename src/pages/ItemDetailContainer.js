@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { getItem, promesa } from '../app/api'
+import { getItems, promesa } from '../app/api'
 import ItemDetail from '../Components/ItemDetail'
 import { useParams } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
      const[informacion, setInformacion] = useState()
 
       useEffect(() => {
-          promesa().then((data) => setInformacion(data.filter((item) => item.id == id)))
+          getItems().then((data) => setInformacion(data.filter((item) => item.id == id)))
       },[id])
 
   return (

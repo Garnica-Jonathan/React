@@ -9,6 +9,7 @@ import ItemListContainer from '../pages/ItemListContainer'
 
 
 import Layout from './Layout'
+import NewPag from '../pages/NewPag'
 
 
 const Router = () =>( 
@@ -16,11 +17,11 @@ const Router = () =>(
     <BrowserRouter>
         <Routes>
             <Route element={<Layout/>}>
-                <Route index  element={<ItemListContainer />}/>
+                <Route index element={<ItemListContainer />}/>
                 <Route path='/:id'  element={<ItemListContainer />}/>
-
                 <Route path="/ItemDetailContainer/" element={<ItemDetailContainer/>}/>
                 <Route path="/ItemDetailContainer/category/:id" element={<ItemDetailContainer/>}/>
+                <Route path="/NewPag/" element={<NewPag/>}/>
                 <Route path="/Cart/" element={<Cart/>}/>
             </Route>
         </Routes>

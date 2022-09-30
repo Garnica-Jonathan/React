@@ -12,9 +12,10 @@ console.log(carrito)
      {
      carrito.length > 0 
      ? carrito.map((producto, id) => <ItemCart key={id} producto={producto} />)
-    : "vacio"
+    : "No hay ningun producto disponible"
     } 
     </div>
+    
     <p>Total: ${precioTotal()}</p>
     <button onClick={()=>clear()}>eliminar todo</button>
     </>

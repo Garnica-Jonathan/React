@@ -10,6 +10,7 @@ const NavBar = () => {
       <h1><Link to='/'>Electro Mundo</Link></h1>
       <p><Link className='NavTitle' to="/ItemListContainer">ItemListContainer</Link></p>
       <p><Link className='NavTitle' to="/ItemDetailContainer/category/1">ItemDetailContainer</Link></p>
+      <p><Link className='NavTitle' to="/NewPag/">Cargar Producto</Link></p>
       <CartWidget/>
     </div>
     
