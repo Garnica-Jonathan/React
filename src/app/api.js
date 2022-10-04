@@ -8,6 +8,12 @@ export const createItem = async(obj) => {
     const data = await addDoc(colRef, obj);
     return data.id;
 }
+export const createOrder = async(obj) => {
+    const colRef = collection(db, 'compras');
+    const data = await addDoc(colRef, obj);
+    return data.id;
+}
+
 
 // UPDATE
 export const updateItem = async (id, obj) => {
@@ -18,6 +24,11 @@ export const updateItem = async (id, obj) => {
 // READ
 export const getItems= async ()  => {
     const colRef = collection(db, 'Ecommerce');
+    const result = await getDocs(query(colRef));
+    return getArrayFromCollection(result);
+}
+export const getIOrder= async ()  => {
+    const colRef = collection(db, 'compras');
     const result = await getDocs(query(colRef));
     return getArrayFromCollection(result);
 }

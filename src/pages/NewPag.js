@@ -1,10 +1,16 @@
+
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import {createItem, getItems, deleteItem, updateItem} from "../app/api"
 
 const NewPag = () => {
-    const [bookName, setBookName] = useState()
+    const [bookDescripcion, setBookDescripcion] = useState({
+        titulo:"",
+        descripcion:"",
+        stock: "",
+        precio: ""
+    })
     const [books, setBook] = useState()
     const [bookId, setBookId] = useState()
 
@@ -14,20 +20,40 @@ const NewPag = () => {
         getBooks()
     }, [])
     console.log(books)
+
+    const create = async (e)=>{
+        e.preventDefault()
+    await createItem(bookDescripcion,getBooks() )
+    }
+
+    const eliminar = async(e) =>{
+        e.preventDefault()
+        await deleteItem(bookId,bookDescripcion, getBooks())
+    }
+
+    const actualizar = async (e) =>{
+        e.preventDefault()
+        await updateItem(bookId,bookDescripcion,getBooks())
+    }
+
   return (
     <>
-        <input type="text" onChange={e => setBookName(e.target.value)} placeholder="titulo"/>
-        <input type="text" onChange={e => setBookId(e.target.value)} placeholder="id"/>
-
-        <button onClick={async () => await createItem({titulo : bookName}, getBooks())}> guardar </button>
-        <button onClick={async () => await updateItem(bookId,{name : bookName}, getBooks())}> Actualizar </button>
-        <button onClick={async () =>  {
-            await deleteItem(bookId)
-            getBooks()
-            }}> eliminar </button>
+        <form onSubmit={create} >
+            <input type="text" value={bookDescripcion.titulo} onChange={(event) => setBookDescripcion({...bookDescripcion, titulo: event.target.value})} placeholder="Titulo"/>
+            <input type="text" value={bookDescripcion.descripcion} onChange={(event) => setBookDescripcion({...bookDescripcion, descripcion: event.target.value})} placeholder="Descripcion"/>
+            <input type="number" value={bookDescripcion.stock} onChange={(event) => setBookDescripcion({...bookDescripcion, stock: event.target.value})} placeholder="Stock"/>
+            <input type="number" value={bookDescripcion.precio} onChange={(event) => setBookDescripcion({...bookDescripcion, precio: event.target.value})} placeholder="precio"/>
+            <button> guardar </button>
+        </form>
+        
+        <form onSubmit={actualizar}>
+            <input type="text" onChange={e => setBookId(e.target.value)} placeholder="id"/>
+            <button>actualizar</button>
+            <button onClick={(e) => eliminar(e)}>eliminar</button>
+        </form>
 
         {
-            books && books.map((book, id) => <p key={id}>{book.id} - {book.titulo}</p>)
+            books && books.map((book, id) => <p key={id}>{book.id} - {book.titulo}- {book.descripcion}-{book.precio}</p>)
         }
         
     </>

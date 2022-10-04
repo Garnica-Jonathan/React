@@ -1,8 +1,11 @@
 import React from 'react'
 import { useCartContext } from '../Contex/Provider'
+import { createOrder,getIOrder } from '../app/api'
+import { useState, useEffect } from 'react'
 
 const ItemCart = ({producto}) => {
     const {removeItem} = useCartContext()
+
   return (
     <div >
         <div className='list'>
@@ -15,6 +18,7 @@ const ItemCart = ({producto}) => {
             <p className='descripcion'>total ${producto.quantity * producto.precio}</p>
             <button className='descripcion' onClick={() => removeItem(producto.id)}>Eliminar</button>
         </div>
+
         
     </div>
   )
