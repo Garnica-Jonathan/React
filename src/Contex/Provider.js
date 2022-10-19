@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useContext, useParams } from 'react'
+import { useState, useContext } from 'react'
 import { createContext } from 'react'
 
 export const useCartContext = () => useContext(AppContex)

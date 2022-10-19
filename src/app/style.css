@@ -17,6 +17,7 @@ cursor: pointer;
 }
 .producto{
 display: flex;
+flex-wrap: wrap
 }
 .list{
     width: 156px;

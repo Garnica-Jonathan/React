@@ -8,8 +8,10 @@ const NavBar = () => {
   return (
     <div className='Nav'>
       <h1><Link to='/'>Electro Mundo</Link></h1>
-      <p><Link className='NavTitle' to="/ItemListContainer">ItemListContainer</Link></p>
-      <p><Link className='NavTitle' to="/ItemDetailContainer/category/1">ItemDetailContainer</Link></p>
+      <p><Link className='NavTitle' to="/ItemListContainer">Inicio</Link></p>
+      <p><Link className="NavTitle" to ="/categoria/robot">Robot</Link></p>
+      <p><Link className="NavTitle" to ="/categoria/libro">Libro</Link></p>
+      <p><Link className="NavTitle" to ="/categoria/auto">auto</Link></p>
       <p><Link className='NavTitle' to="/NewPag/">Cargar Producto</Link></p>
       <CartWidget/>
     </div>

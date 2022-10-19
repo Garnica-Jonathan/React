@@ -18,9 +18,9 @@ const Router = () =>(
         <Routes>
             <Route element={<Layout/>}>
                 <Route index element={<ItemListContainer />}/>
-                <Route path='/:id'  element={<ItemListContainer />}/>
-                <Route path="/ItemDetailContainer/" element={<ItemDetailContainer/>}/>
-                <Route path="/ItemDetailContainer/category/:id" element={<ItemDetailContainer/>}/>
+                <Route path='/ItemListContainer'  element={<ItemListContainer />}/>
+                <Route path="/categoria/:categoryId" element={<ItemListContainer/>}/>
+                <Route path="/ItemDetailContainer/detalle/:id" element={<ItemDetailContainer/>}/>
                 <Route path="/NewPag/" element={<NewPag/>}/>
                 <Route path="/Cart/" element={<Cart/>}/>
             </Route>
