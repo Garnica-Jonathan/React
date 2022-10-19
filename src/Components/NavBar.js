@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <div className='Nav'>
       <h1><Link to='/'>Electro Mundo</Link></h1>
-      <p><Link className='NavTitle' to="/ItemListContainer">Inicio</Link></p>
+      <p><Link className='NavTitle' to="/Item/">Inicio</Link></p>
       <p><Link className="NavTitle" to ="/categoria/robot">Robot</Link></p>
       <p><Link className="NavTitle" to ="/categoria/libro">Libro</Link></p>
       <p><Link className="NavTitle" to ="/categoria/auto">auto</Link></p>

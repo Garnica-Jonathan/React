@@ -20,10 +20,15 @@ const ItemDetailContainer = () => {
           //   const infor = data.filter((item) => item.id !== id) 
           //   setInformacion(infor)
           // }
+
+          
         })
         setCargando(false)
      },1000)
-          
+
+     return () =>{
+          setCargando(true)
+        }
       },[id])
 
   return (
@@ -32,11 +37,11 @@ const ItemDetailContainer = () => {
          cargando ? <p>Cargando</p>
           : informacion.map((info, id) => (
           <ItemDetail key={id} info={info} />))
-          
         }   
         
     </div>
   )
+  
 }
 
 export default ItemDetailContainer

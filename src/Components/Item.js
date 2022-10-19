@@ -16,7 +16,7 @@ const Item = ({item}) => {
               <p className='descripcion'>Descripcion: {item.descripcion}</p>
               <p className='descripcion'>categoria: {item.categoria}</p>
               <p className='descripcion'>Stock: {item.stock}</p>
-              <p><Link to={`/ItemDetailContainer/detalle/${item.id}`}>acceder </Link></p>
+              <p><Link to={`/detalle/${item.id}`}>acceder </Link></p>
           </div>
       </div>
     </div>
