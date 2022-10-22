@@ -9,9 +9,10 @@ const NavBar = () => {
     <div className='Nav'>
       <h1><Link to='/'>Electro Mundo</Link></h1>
       <p><Link className='NavTitle' to="/Item/">Inicio</Link></p>
-      <p><Link className="NavTitle" to ="/categoria/robot">Robot</Link></p>
-      <p><Link className="NavTitle" to ="/categoria/libro">Libro</Link></p>
-      <p><Link className="NavTitle" to ="/categoria/auto">auto</Link></p>
+      <p><Link className="NavTitle" to ="/categoria/Cocina">Cocina</Link></p>
+      <p><Link className="NavTitle" to ="/categoria/Limpieza">Limpieza</Link></p>
+      <p><Link className="NavTitle" to ="/categoria/Cafetera">Cafetera</Link></p>
+      <p><Link className="NavTitle" to ="/categoria/Pava">Pava</Link></p>
       <p><Link className='NavTitle' to="/NewPag/">Cargar Producto</Link></p>
       <CartWidget/>
     </div>

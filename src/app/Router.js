@@ -11,6 +11,7 @@ import ItemListContainer from '../pages/ItemListContainer'
 import Layout from './Layout'
 import NewPag from '../pages/NewPag'
 import Finalizar from '../pages/Finalizar'
+import Information from '../pages/Information'
 
 
 const Router = () =>( 
@@ -24,7 +25,9 @@ const Router = () =>(
                 <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
                 <Route path="/NewPag/" element={<NewPag/>}/>
                 <Route path="/Cart/" element={<Cart/>}/>
-                <Route path="/Finalizar/" element={<Finalizar/>}/>
+                <Route path="/Information/" element={<Information/>}/>
+                <Route path="/Finalizar/:idCompras" element={<Finalizar/>}/>
+                
             </Route>
         </Routes>
     </BrowserRouter>

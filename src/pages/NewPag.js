@@ -55,7 +55,7 @@ const NewPag = () => {
         </form>
 
         {
-            books && books.map((book, id) => <p key={id}>{book.id} - {book.titulo}- {book.descripcion}-{book.categoria}-{book.precio}</p>)
+            books && books.map((book, id) => <p key={id}>{book.id} - {book.titulo}- {book.descripcion}-{book.stock}-{book.precio}</p>)
         }
         
     </>
