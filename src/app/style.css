@@ -2,6 +2,7 @@
 display: flex;
 justify-content: space-around;
 align-items: center;
+margin: -8px;
 }
 .NavTitle{
 display: flex;
@@ -18,8 +19,11 @@ cursor: pointer;
     height: 50px;
 }
 .producto{
-display: flex;
-flex-wrap: wrap
+ display: flex;
+flex-wrap: wrap;
+justify-content: center; 
+/* display: grid;
+grid-template-columns: repeat(6, 1fr); */
 }
 .list{
     width: 156px;
@@ -66,4 +70,14 @@ width: 250px;
 }
 .infoFoto{
 width: 250px;
+}
+.footer{
+    margin: -8px;
+}
+.form{
+    display: grid;
+    justify-content: center;
+}
+.imput{
+    margin-bottom: 10px;
 }

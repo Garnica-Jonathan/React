@@ -27,7 +27,6 @@ const Router = () =>(
                 <Route path="/Cart/" element={<Cart/>}/>
                 <Route path="/Information/" element={<Information/>}/>
                 <Route path="/Finalizar/:idCompras" element={<Finalizar/>}/>
-                
             </Route>
         </Routes>
     </BrowserRouter>

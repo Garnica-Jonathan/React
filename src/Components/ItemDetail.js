@@ -28,10 +28,7 @@ const ItemDetail = ({info}) => {
           count ? 
           <button><Link to={'/cart/'}>Terminar Compra</Link></button>
            :  <ItemCount stock={info.stock} initial={1} onAdd={onAdd}/>
-          //  <button onClick={() => agregarCarrito(count[0])}><ItemCount stock={7} initial={1} onAdd={onAdd}/></button>
-           
         }
-        
     </div>
   )
 }

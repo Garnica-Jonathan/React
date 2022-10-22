@@ -17,12 +17,11 @@ console.log(carrito)
     }
   return (
     <>
-    <div className='producto'>
+    <div>
      {
      carrito.map((producto, id) => <ItemCart key={id} producto={producto} />)
      } 
     </div>
-    
     <p>Total: ${precioTotal()}</p>
     <button onClick={()=>clear()}>eliminar todo</button>
      <Link to={"/Information/"}>comprar</Link>

@@ -13,15 +13,6 @@ const ItemDetailContainer = () => {
         setTimeout(()=>{
         getItems().then((data) => {
            setInformacion(data.filter((item) => item.id === id)) 
-          // if(id){
-          //   const informacion = data.filter((item) => item.id === id) 
-          //   setInformacion(informacion)
-          // }else{
-          //   const infor = data.filter((item) => item.id !== id) 
-          //   setInformacion(infor)
-          // }
-
-          
         })
         setCargando(false)
      },1000)

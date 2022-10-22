@@ -4,11 +4,10 @@ import NavBar from '../Components/NavBar'
 
 const Layout = () => {
   return (
-    <div>
+    <div className='Layout'>
         <NavBar/>
         <Outlet/>
-        <footer>El footer</footer>
-
+        <footer className="footer">El footer</footer>
     </div>
   )
 }

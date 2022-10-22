@@ -16,18 +16,6 @@ const NavBar = () => {
       <p><Link className='NavTitle' to="/NewPag/">Cargar Producto</Link></p>
       <CartWidget/>
     </div>
-    
-    // <div className='Nav'>
-      
-
-    //     {/* <h1>Electro Mundo</h1>
-    //     <a className='NavTitle' href="#">Inicio</a>
-    //     <a className='NavTitle' href="#">Categorias</a>
-    //     <a className='NavTitle' href="#">Ofertas</a> */}
-    //     <CartWidget/>
-        
-    // </div>
-
   )
 }
 
